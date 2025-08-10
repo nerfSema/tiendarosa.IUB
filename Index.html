@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Doña Rosa</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Artesanía Doña Rosa</h1>
+  </header>
+
+  <main>
+    <section class="producto">
+      <h2>Collar Artesanal</h2>
+      <p>Precio: $<span class="precio">15000</span></p>
+      <label>Cantidad:
+        <input type="number" min="0" value="0" class="cantidad1" />
+      </label>
+      <button onclick="agregarAlCarrito('Collar Artesanal', 15000, '.cantidad1')">
+        Agregar al carrito
+      </button>
+    </section>
+
+    <section class="producto">
+      <h2>Pulsera Artesanal</h2>
+      <p>Precio: $<span class="precio">10000</span></p>
+      <label>Cantidad:
+        <input type="number" min="0" value="0" class="cantidad2" />
+      </label>
+      <button onclick="agregarAlCarrito('Pulsera Artesanal', 10000, '.cantidad2')">
+        Agregar al carrito
+      </button>
+    </section>
+
+    <section class="carrito">
+      <h2>Carrito de compras</h2>
+      <div id="detalle-carrito"></div>
+      <p>Total: $<span id="total">0</span></p>
+      <button onclick="finalizarCompra()">Finalizar compra</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
